@@ -1,0 +1,128 @@
+<div class="abas-textos">
+  <!-- ABA 1 -->
+  <div class="aba-conteudo ativo" data-conteudo="alura">
+    <h3 class="aba-conteudo-titulo-principal">conseguir uma faculdade</h3>
+    <p class="aba-conteudo-titulo-secundario">faculdade de fisioterapia</p>
+
+    <div class="barra-texto">
+      <p class="barra-texto__titulo">Sobre a Faculdade de Fisioterapia</p>
+      <p class="barra-texto__texto">
+        A faculdade de fisioterapia forma profissionais para avaliar e tratar problemas do corpo usando
+        exercícios, técnicas manuais e recursos físicos, com bastante prática supervisionada (reabilitação e
+        prevenção). Custos: variam conforme pública vs. particular. Na particular entram principalmente mensalidade
+        e, além disso, gastos comuns como transporte, materiais (ex.: jaleco e materiais de estudo) e possíveis taxas.
+      </p>
+    </div>
+  </div>
+
+  <!-- ABA 2 -->
+  <div class="aba-conteudo" data-conteudo="js">
+    <h3 class="aba-conteudo-titulo-principal">ter um planejamento financeiro</h3>
+    <p class="aba-conteudo-titulo-secundario">planejamento e controle</p>
+
+    <div class="barra-texto">
+      <p class="barra-texto__titulo">Planejamento Financeiro</p>
+      <p class="barra-texto__texto">
+        Planejar as finanças é organizar sua renda e seus gastos para ter controle do dinheiro. Comece registrando
+        as despesas do mês, separando o que é essencial e o que pode ser reduzido. Depois, defina metas (como
+        quitar dívidas, criar reserva de emergência e investir). Com um orçamento simples, fica mais fácil acompanhar
+        o progresso e evitar gastos por impulso.
+      </p>
+    </div>
+  </div>
+
+  <!-- ABA 3 -->
+  <div class="aba-conteudo" data-conteudo="portfolio">
+    <h3 class="aba-conteudo-titulo-principal">conquista um veiculo</h3>
+    <p class="aba-conteudo-titulo-secundario">planejamento para comprar</p>
+
+    <div class="barra-texto">
+      <p class="barra-texto__titulo">Conquista de um Veículo</p>
+      <p class="barra-texto__texto">
+        Ter um veículo representa mais liberdade e praticidade no dia a dia. Para alcançar esse objetivo, defina
+        uma meta clara (qual modelo/valor e até quando), calcule quanto você precisa juntar e escolha uma estratégia
+        de economia. Se for por compra, considere também os custos além do preço (IPVA, seguro, manutenção e combustível).
+        Assim, você transforma o desejo em um plano realista e acompanha o progresso mês a mês.
+      </p>
+    </div>
+  </div>
+
+  <!-- ABA 4 -->
+  <div class="aba-conteudo" data-conteudo="curriculo">
+    <h3 class="aba-conteudo-titulo-principal">Atualizar currículo</h3>
+    <p class="aba-conteudo-titulo-secundario">Fisioterapia • estudante (Ensino Médio)</p>
+
+    <div class="barra-texto">
+      <p class="barra-texto__titulo">Seus dados (Fisioterapia)</p>
+
+      <p class="barra-texto__texto">
+        <strong>1) Dados pessoais</strong><br>
+        Nome: <span style="color: var(--botao-ativo);">Mariana Ricardo Zago</span><br>
+        Telefone/WhatsApp: <span style="color: var(--botao-ativo);">(44)998553106</span><br>
+        E-mail: <span style="color: var(--botao-ativo);">marianaricardo46@gmail.com</span><br>
+        Cidade/UF: <span style="color: var(--botao-ativo);">Umuarama/PR</span>
+      </p>
+
+      <p class="barra-texto__texto" style="margin-top: 14px;">
+        <strong>2) Objetivo</strong><br>
+        Área de interesse: <span style="color: var(--botao-ativo);">Fisioterapia</span><br>
+        Objetivo (1–2 linhas):<br>
+        <span style="display:block; margin-top:6px; color: var(--botao-ativo);">
+          Iniciar minha formação na área de Fisioterapia e contribuir com práticas de cuidado e reabilitação.
+        </span>
+      </p>
+
+      <p class="barra-texto__texto" style="margin-top: 14px;">
+        <strong>3) Formação escolar</strong><br>
+        Nível: <span style="color: var(--botao-ativo);">Ensino Médio</span><br>
+        Escola: <span style="color: var(--botao-ativo);">Colégio Cívico Militar Monteiro Lobato</span><br>
+        Previsão de conclusão: <span style="color: var(--botao-ativo);">2026</span>
+      </p>
+
+      <p class="barra-texto__texto" style="margin-top: 14px;">
+        <strong>4) Habilidades</strong><br>
+        • <span style="color: var(--botao-ativo);">Comunicação</span><br>
+        • <span style="color: var(--botao-ativo);">Trabalho em equipe</span><br>
+        • <span style="color: var(--botao-ativo);">Responsabilidade/comprometimento</span><br>
+        • <span style="color: var(--botao-ativo);">Interesse pela área de saúde</span>
+      </p>
+
+      <p class="barra-texto__texto" style="margin-top: 14px;">
+        <strong>5) Por que Fisioterapia?</strong><br>
+        Escreva 3–5 linhas:<br>
+        <span style="display:block; margin-top:6px; color: var(--botao-ativo);">
+          Tenho interesse na área porque gosto de entender o corpo humano e ajudar pessoas na recuperação e no bem-estar.
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <script>
+    const botoes = document.querySelectorAll(".botao");
+    const abas = document.querySelectorAll(".aba-conteudo");
+
+    function ativar(idAba) {
+      // ativa o botão
+      botoes.forEach(btn => {
+        const ativo = btn.dataset.aba === idAba;
+        btn.classList.toggle("ativo", ativo);
+      });
+
+      // mostra a aba correspondente
+      abas.forEach(aba => {
+        const mostrar = aba.dataset.conteudo === idAba;
+        aba.classList.toggle("ativo", mostrar);
+      });
+    }
+
+    botoes.forEach(btn => {
+      btn.addEventListener("click", () => {
+        ativar(btn.dataset.aba);
+      });
+    });
+  </script>
+</body>
+</html>
